@@ -9,8 +9,6 @@ import java.time.LocalDate;
 public class Caguano extends Carro {
 	private int alcanceTiro;
 	private Confeti confeti;
-	private static String LETRA="C";
-	private static int LONGITUD=2;
 
 	public Caguano() {
 		super();
@@ -38,19 +36,10 @@ public class Caguano extends Carro {
 	public void setConfeti(Confeti confeti) {
 		this.confeti = confeti;
 	}
-	
-	public static String getLETRA() {
-		return LETRA;
-	}
-
-	public static int getLONGITUD() {
-		return LONGITUD;
-	}
 
 	@Override
 	public String toString() {
-		return super.toString() + "\n Caguano  \n alcanceTiro: " + alcanceTiro + " \n confeti: " + confeti 
-				+ "longitud: "+Caguano.LONGITUD;
+		return super.toString() + "\n Caguano  \n alcanceTiro: " + alcanceTiro + " \n confeti: " + confeti;
 	}
 
 }

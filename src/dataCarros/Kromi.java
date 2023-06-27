@@ -8,8 +8,6 @@ import java.time.LocalDate;
 public class Kromi extends Carro {
 	private LocalDate añoFabricacion;
 	private String marca;
-	private static String LETRA ="K";
-	private static int LONGITUD = 3;
 
 	public Kromi() {
 		super();
@@ -37,21 +35,10 @@ public class Kromi extends Carro {
 	public void setMarca(String marca) {
 		this.marca = marca;
 	}
-	
-	public static int getLONGITUD() {
-		return LONGITUD;
-	}
-
-
-	public static String getLETRA() {
-		return LETRA;
-	}
 
 	@Override
 	public String toString() {
-		return super.toString() + "\n Kromi  \n añoFabricacion: " + añoFabricacion + " \n marca: " + marca 
-				+ "longitud" + Kromi.LONGITUD;
+		return super.toString() + "\n Kromi  \n añoFabricacion: " + añoFabricacion + " \n marca: " + marca;
 	}
 
-	
 }

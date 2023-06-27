@@ -4,11 +4,11 @@ package domain;
  * Clase que verifica las coordenadas para crear los Carros.
  */
 public class VerificaCoordenada {
-	int num;
 	int fila;
 	int columna;
 	boolean estado;
 	String a="a";
+	
 	
 	public boolean verificaKromi(String tJuego[][], int fila,int columna) {
 		

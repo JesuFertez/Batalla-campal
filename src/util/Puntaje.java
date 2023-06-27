@@ -1,10 +1,5 @@
 package util;
 
-import dataCarros.Caguano;
-import dataCarros.Coordenada;
-import dataCarros.Kromi;
-import dataCarros.Trupalla;
-
 /*
  *  los que pueden lanzar libremente dentro del espacio considerado. Para representar esto, se debe solicitar
  *   al usuario que ingrese un número de fila y de columna, ambos válidos, y verificar si en la matriz está ubicado
@@ -25,11 +20,6 @@ Finalmente, al terminar el programa se debe indicar el puntaje total obtenido po
 
 public class Puntaje {
 
-	// int fila;
-	// int columna;
-	// Kromi kromi;
-	// Caguano caguano;
-	// Trupalla trupalla;
 	int puntos = 0;
 	public static int puntosContador = 0;
 
@@ -47,19 +37,6 @@ public class Puntaje {
 
 	public static void setPuntosContador(int puntosContador) {
 		Puntaje.puntosContador = puntosContador;
-	}
-
-	public int identificar(String valor) {
-		puntos=0;
-		if(valor.equals("K")) {
-			puntos= puntos+3;
-		}else if(valor.equals("C")) {
-			puntos = puntos+2;
-		}else if(valor.equals("T")) {
-			puntos = puntos+1;
-		}
-		
-		return puntos;
 	}
 
 }
