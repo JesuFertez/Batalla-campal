@@ -22,7 +22,6 @@ public class BaseCarros {
 	String C = Colores.ANSI_GREEN +"C"+ Colores.ANSI_RESET;
 	String T= Colores.ANSI_GREEN +"T"+ Colores.ANSI_RESET; 
 	
-	
 	public BaseCarros() {
 	}
 	
@@ -31,7 +30,6 @@ public class BaseCarros {
 		return num;
 
 	}
-	
 	
 	public void crearKromi(String tPosiciones[][]) {
 		for (int i = 0; i < 3;) {
@@ -49,7 +47,6 @@ public class BaseCarros {
 		}
 	}
 
-
 	public void crearCaguano(String tPosiciones[][]) {
 		for (int i = 0; i < 5;) {
 			fila = generarRandom(15);
@@ -64,7 +61,6 @@ public class BaseCarros {
 			}
 		}
 	}
-
 
 	public void crearTrupalla(String tPosiciones[][]) {
 		for (int i = 0; i < 10;) {

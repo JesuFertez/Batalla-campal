@@ -8,9 +8,10 @@ import util.Colores;
 public class Tablero {
 	protected String tJuego[][] = new String[15][15];
 	protected String tPosiciones[][] = new String[15][15];
-	private List<Huevo> huevos;
+	private List<Huevo> huevos = new ArrayList<Huevo>();
 	int num, fila, columna;
-	Colores color;
+	String H = Colores.ANSI_RED + "H" + Colores.ANSI_RESET;
+	String HA = Colores.ANSI_YELLOW + "H" + Colores.ANSI_RESET;
 	Huevo huevo = new Huevo();
 	BaseCarros llamado = new BaseCarros();
 	Coordenada cor = new Coordenada();
@@ -21,7 +22,6 @@ public class Tablero {
 	public Tablero(String tJuego[][], String tPosiciones[][]) {
 		this.tJuego = tJuego;
 		this.tPosiciones = tPosiciones;
-		huevos = new ArrayList<Huevo>();
 	}
 
 	public void inicializarTablero() {
@@ -43,18 +43,24 @@ public class Tablero {
 	public void lanzarHuevo(int fila, int columna) {
 		Huevo huevo;
 		String valor = "";
-		
+
 		for (int i = 0; i < 15; i++) {
 			for (int j = 0; j < 15; j++) {
-				if (tPosiciones[i][j] == tPosiciones[fila][columna] && tPosiciones[i][j] != "a") {
+
+				if (tPosiciones[i][j] == tPosiciones[fila][columna]) {
 					valor = tPosiciones[fila][columna];
-					cor.setFila(fila); 
+					cor.setFila(fila);
 					cor.setColumna(columna);
+
+					if (tPosiciones[i][j] != "a") {
+						tPosiciones[i][j] = H;
+					}
+					
 				}
 			}
 		}
 		int puntos = calcularPuntaje(valor);
-		huevo= new Huevo(cor,puntos);
+		huevo = new Huevo(cor, puntos);
 		huevos.add(huevo);
 	}
 
@@ -79,20 +85,19 @@ public class Tablero {
 	}
 
 	public int calcularPuntaje(String valor) {
-		
+
 		int puntaje = 0;
-		if(valor == llamado.K) {
+		if (valor == llamado.K) {
 			puntaje = 3;
-		}else if(valor== llamado.C) {
+		} else if (valor == llamado.C) {
 			puntaje = 2;
-		}else if(valor == llamado.T) {
+		} else if (valor == llamado.T) {
 			puntaje = 1;
-		}
-		else {
+		} else {
 			System.out.println("Intente nuevamente...");
 		}
-		System.out.println(" Puntos de Tiro " + puntaje);
+		System.out.println(" Puntos de Tiro: " + puntaje);
 		return puntaje;
 	}
-	
+
 }
