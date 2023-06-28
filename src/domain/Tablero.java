@@ -43,19 +43,21 @@ public class Tablero {
 	public void lanzarHuevo(int fila, int columna) {
 		Huevo huevo;
 		String valor = "";
-
+		
 		for (int i = 0; i < 15; i++) {
 			for (int j = 0; j < 15; j++) {
-
+				
 				if (tPosiciones[i][j] == tPosiciones[fila][columna]) {
 					valor = tPosiciones[fila][columna];
 					cor.setFila(fila);
 					cor.setColumna(columna);
-
-					if (tPosiciones[i][j] != "a") {
-						tPosiciones[i][j] = H;
+					if(tPosiciones[fila][columna]==llamado.K ||tPosiciones[fila][columna]==llamado.C ||tPosiciones[fila][columna]==llamado.T ) {
+						tPosiciones[fila][columna] = H;
+						tJuego[fila][columna] = H;
+					}else {
+					tPosiciones[fila][columna] = HA;
+					tJuego[fila][columna] = HA;
 					}
-					
 				}
 			}
 		}
@@ -82,10 +84,10 @@ public class Tablero {
 			}
 			System.out.println("");
 		}
+		System.out.println("");
 	}
 
 	public int calcularPuntaje(String valor) {
-
 		int puntaje = 0;
 		if (valor == llamado.K) {
 			puntaje = 3;
