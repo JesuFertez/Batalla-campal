@@ -36,7 +36,7 @@ public class BaseCarros {
 		for (int i = 0; i < 3;) {
 			fila = generarRandom(13);
 			columna = generarRandom(15);
-			boolean response = verificacion.verificaKromi(tPosiciones, fila, columna);
+			boolean response = verificacion.verificaKromi(tPosiciones, fila, columna,"a");
 			if (response) {
 				cor = new Coordenada(fila, columna);
 				carros.add(new Kromi(15, LocalDate.now(), cor, LocalDate.of(2000, 03, 14), "Toyota"));
@@ -52,7 +52,7 @@ public class BaseCarros {
 		for (int i = 0; i < 5;) {
 			fila = generarRandom(15);
 			columna = generarRandom(14);
-			boolean response = verificacion.verificaCaguano(tPosiciones, fila, columna);
+			boolean response = verificacion.verificaCaguano(tPosiciones, fila, columna,"a");
 			if (response) {
 				cor = new Coordenada(fila, columna);
 				carros.add(new Caguano(3, LocalDate.of(2002, 12, 03), cor, 5, Confeti.AMARILLO));
@@ -67,7 +67,7 @@ public class BaseCarros {
 		for (int i = 0; i < 10;) {
 			fila = generarRandom(15);
 			columna = generarRandom(15);
-			boolean response = verificacion.verificaTrupalla(tPosiciones, fila, columna);
+			boolean response = verificacion.verificaTrupalla(tPosiciones, fila, columna,"a");
 			if (response) {
 				cor = new Coordenada(fila, columna);
 				carros.add(new Trupalla(2, LocalDate.of(2000, 04, 06), cor, 4, "Copa"));

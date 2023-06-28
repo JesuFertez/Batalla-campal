@@ -32,7 +32,7 @@ public class Coordenada {
 
 	@Override
 	public String toString() {
-		return "Coordenada  \n fila: " + fila + " \n columna: " + columna;
+		return "Coordenada : Fila =  " + fila +" "+" Columna = " + columna;
 	}
 
 }

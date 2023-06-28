@@ -7,10 +7,8 @@ public class VerificaCoordenada {
 	int fila;
 	int columna;
 	boolean estado;
-	String a="a";
 	
-	
-	public boolean verificaKromi(String tJuego[][], int fila,int columna) {
+	public boolean verificaKromi(String tJuego[][], int fila,int columna,String a) {
 		
 		if(tJuego[fila][columna] == a && tJuego[fila+1][columna] == a 
 				&& tJuego[fila+2][columna] == a) {
@@ -21,7 +19,7 @@ public class VerificaCoordenada {
 		return estado; 
 	}
 	
-	public boolean verificaCaguano(String tJuego[][],int fila,int columna) {
+	public boolean verificaCaguano(String tJuego[][],int fila,int columna, String a) {
 		
 		if(tJuego[fila][columna] == a && tJuego[fila][columna+1] == a) {
 			estado=true;
@@ -31,7 +29,7 @@ public class VerificaCoordenada {
 		return estado; 
 	}
 	
-	public boolean verificaTrupalla(String tJuego[][],int fila,int columna) {
+	public boolean verificaTrupalla(String tJuego[][],int fila,int columna, String a) {
 		
 		if(tJuego[fila][columna] == a){
 			estado=true;

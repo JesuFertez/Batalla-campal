@@ -39,7 +39,7 @@ public void setPuntajeLanzamiento(int puntajeLanzamiento) {
 
 @Override
 public String toString() {
-	return " ****** Huevo ****** \n Coordenada: " + coordenada + " \n Puntaje lanzamiento: " + puntajeLanzamiento;
+	return coordenada + "  Puntaje lanzamiento = " + puntajeLanzamiento;
 }
 
 
