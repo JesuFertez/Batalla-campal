@@ -13,6 +13,7 @@ public class Main {
 		tablero.inicializarTablero();
 		tablero.crearcarro();
 		tablero.mostrarMatriz();
+		boolean confirmacion=false;
 		
 		do {
 			System.out.println("*** Menú de ejecuciones ***" + "\n Ingrese una opción...... ");
@@ -23,14 +24,16 @@ public class Main {
 			switch (op) {
 
 			case 1:
+				do {
 				System.out.println("Ingrese una fila");
 				fila = scanner.nextInt();
 				System.out.println("Ingrese una columna");
 				columna = scanner.nextInt();
+				confirmacion = tablero.confirmacion(fila,columna);
+				}while(!confirmacion);
 				tablero.lanzarHuevo(fila, columna);
 				break;
 			case 2:
-
 				break;
 			case 3: tablero.mostrarMatriz();
 				break;

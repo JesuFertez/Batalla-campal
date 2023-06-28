@@ -18,11 +18,12 @@ public class BaseCarros {
 	VerificaCoordenada verificacion = new VerificaCoordenada();
 	ArrayList<Carro> carros= new ArrayList<Carro>(18);
 	Coordenada cor;
-	String K = Colores.ANSI_GREEN +"K"+ Colores.ANSI_RESET;
-	String C = Colores.ANSI_GREEN +"C"+ Colores.ANSI_RESET;
-	String T= Colores.ANSI_GREEN +"T"+ Colores.ANSI_RESET; 
+	static final String K= Colores.ANSI_GREEN +"K"+ Colores.ANSI_RESET;
+	static final String C= Colores.ANSI_GREEN +"C"+ Colores.ANSI_RESET;
+	static final String T= Colores.ANSI_GREEN +"T"+ Colores.ANSI_RESET; 
 	
 	public BaseCarros() {
+		
 	}
 	
 	public int generarRandom(int valorMax) {
