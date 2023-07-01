@@ -8,8 +8,6 @@ public class Main {
 		boolean salir = false;
 		Scanner scanner = new Scanner(System.in);
 		Tablero tablero = new Tablero();
-
-
 		
 		tablero.inicializarTablero();
 		tablero.crearcarro();
@@ -47,10 +45,23 @@ public class Main {
 				break;
 			default:
 				System.out.println("Por favor ingrese una opción válida ");
-
 			}
 		} while (!salir);
+		System.out.print("########     ###    ########    ###    ##       ##          ###       \n"
+				+ "##     ##   ## ##      ##      ## ##   ##       ##         ## ##      \n"
+				+ "##     ##  ##   ##     ##     ##   ##  ##       ##        ##   ##     \n"
+				+ "########  ##     ##    ##    ##     ## ##       ##       ##     ##    \n"
+				+ "##     ## #########    ##    ######### ##       ##       #########    \n"
+				+ "##     ## ##     ##    ##    ##     ## ##       ##       ##     ##    \n"
+				+ "########  ##     ##    ##    ##     ## ######## ######## ##     ##  ");
+		System.out.println("");
+		System.out.println("    ######     ###    ##     ## ########     ###    ##                \n"
+				+ "   ##    ##   ## ##   ###   ### ##     ##   ## ##   ##                \n"
+				+ "   ##        ##   ##  #### #### ##     ##  ##   ##  ##                \n"
+				+ "   ##       ##     ## ## ### ## ########  ##     ## ##                \n"
+				+ "   ##       ######### ##     ## ##        ######### ##                \n"
+				+ "   ##    ## ##     ## ##     ## ##        ##     ## ##                \n"
+				+ "    ######  ##     ## ##     ## ##        ##     ## ########    ");
 		scanner.close();
 	}
-
 }

@@ -39,4 +39,28 @@ public class VerificaCoordenada {
 		return estado; 
 	}
 	
+	public boolean bonoKromi(String tJuego[][],int fila, int columna, String a) {
+		
+		if(fila<13 && tJuego[fila][columna]==a && tJuego[fila+1][columna]==a && tJuego[fila+2][columna]==a ||
+				fila <14 && tJuego[fila][columna]==a && tJuego[fila-1][columna]==a && tJuego[fila+1][columna]==a ||
+				tJuego[fila][columna]==a && tJuego[fila-1][columna]==a && tJuego[fila-2][columna]==a) {
+			estado = true;
+		}else {
+			estado=false;
+		}
+		
+	return estado;
+	}
+	
+	public boolean bonoCaguano(String tJuego[][],int fila,int columna, String a) {
+		
+		if(fila<14 && tJuego[fila][columna] == a && tJuego[fila][columna+1] == a||
+				tJuego[fila][columna] == a && tJuego[fila][columna-1] == a) {
+			estado=true;
+		}else {
+			estado=false;
+		}
+		return estado; 
+	}
+	
 }
