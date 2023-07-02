@@ -34,6 +34,7 @@ public class Tablero {
 				tPosiciones[i][j] = "a";
 			}
 		}
+		
 	}
 
 	public String[][] crearcarro() {
@@ -60,17 +61,19 @@ public class Tablero {
 		int puntos = calcularPuntaje(valor, cor);
 		Huevo huevo = new Huevo(cor, puntos);
 		huevos.add(huevo);
+		
 		}else {
 			System.out.println("Ya se ha lanzado un huevo en esta coordenada");
 		}
 	}
 
 	public void mostrarMatriz() {
-		System.out.println("           **** Tablero Posiciones ****    ");
-		System.out.println("    0  1  2  3  4  5  6  7  8  9 10 11 12 13 14");
+		System.out.println("");
+		System.out.println("            **** Tablero Posiciones ****    ");
+		System.out.println("      0  1  2  3  4  5  6  7  8  9 10 11 12 13 14");
 		System.out.println("");
 		for (int i = 0; i < 15; i++) {
-			String formateado = String.format("%-3d", i); //formato para alinear las coordenadas de fila
+			String formateado = String.format("  "+"%-3d", i); //formato para alinear las coordenadas de fila
 			System.out.print(formateado);
 			for (int j = 0; j < 15; j++) {
 				System.out.print(" " + tPosiciones[i][j] + " ");
@@ -79,12 +82,12 @@ public class Tablero {
 		}
 		System.out.println("");
 
-		System.out.println("            **** Tablero Juego ****    ");
-		System.out.println("    0  1  2  3  4  5  6  7  8  9 10 11 12 13 14");
+		System.out.println("              **** Tablero Juego ****    ");
+		System.out.println("      0  1  2  3  4  5  6  7  8  9 10 11 12 13 14");
 		System.out.println("");
 
 		for (int i = 0; i < 15; i++) {
-			String formateado = String.format("%-3d", i); //formato para alinear las coordenadas de fila
+			String formateado = String.format("  "+"%-3d", i); //formato para alinear las coordenadas de fila
 			System.out.print(formateado);
 			for (int j = 0; j < 15; j++) {
 				System.out.print(" " + tJuego[i][j] + " ");
@@ -148,11 +151,14 @@ public class Tablero {
 	}
 
 	public void mostrarPuntaje() {
+		
 		int puntos = 0;
 		int total = 0;
 		int bonos = 0;
 		System.out.println("     ****** Huevos ******     ");
 		System.out.println("");
+		
+		if(huevos.size()<=0) {System.out.println(" Aún no se han lanzado huevos");}else {
 		for (int i = 0; i < huevos.size(); i++) {
 			System.out.println(" " + i + " " + huevos.get(i));
 			puntos += huevos.get(i).getPuntajeLanzamiento();
@@ -162,14 +168,14 @@ public class Tablero {
 		if(puntosBono!=null) {
 			bonos =puntosBono.stream().mapToInt(Integer::intValue).sum();
 			System.out.println("**** Bonificación de tiros ****");
-			puntosBono.forEach(b ->System.out.println(" "+ b+ " - "));
+			puntosBono.forEach(b ->System.out.print(" "+ b+ "-"));
 		}
 		
-		System.out.println("    **** Puntaje Total ****    ");
+		System.out.println("\n    **** Puntaje Total ****    ");
 		total= puntos+bonos;
 		System.out.println("     *** " + total + " ***    ");
 	}
-	
+	}
 
 	public boolean confirmacion(int entrada, int entrada2) {
 		boolean response;
@@ -179,6 +185,23 @@ public class Tablero {
 			response = false;
 		}
 		return response;
+	}
+	
+	public void tableroJuego() {
+		System.out.println("");
+		System.out.println("              **** Tablero Juego ****    ");
+		System.out.println("      0  1  2  3  4  5  6  7  8  9 10 11 12 13 14");
+		System.out.println("");
+
+		for (int i = 0; i < 15; i++) {
+			String formateado = String.format("  "+"%-3d", i); //formato para alinear las coordenadas de fila
+			System.out.print(formateado);
+			for (int j = 0; j < 15; j++) {
+				System.out.print(" " + tJuego[i][j] + " ");
+			}
+			System.out.println("");
+		}
+		System.out.println("");
 	}
 }
 
