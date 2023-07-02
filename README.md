@@ -6,4 +6,4 @@ Simil de Batalla Naval ambientado en las calles manifestantes de Chile.
 
   ## PREVISUALIZACION
 
-![PREVISUALIZACIÓN PROYECTO Batalla campal ](screenshots/Tablero_1_fondo.png)
+![PREVISUALIZACIÓN PROYECTO BATALLA CAMPAL ](screenshots/Tablero_1.png)
