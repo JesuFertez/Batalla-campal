@@ -1,3 +1,9 @@
 # Batalla-campal
-Juego desarrollado en Java / Simil de Batalla Naval ambientado en estallido social Chileno.
-### PROYECTO EN DESARROLLO...
+Simil de Batalla Naval ambientado en las calles manifestantes de Chile.
+- Desarrollado en Java
+- Ejecución consola
+- Ide Eclipse
+
+  ## PREVISUALIZACION
+
+![PREVISUALIZACIÓN PROYECTO Batalla campal ](screenshots/Tablero_1_fondo.png)
