@@ -7,3 +7,6 @@ Simil de Batalla Naval ambientado en las calles manifestantes de Chile.
   ## PREVISUALIZACION
 
 ![PREVISUALIZACIÓN PROYECTO BATALLA CAMPAL ](screenshots/Tablero_1.png)
+
+## AUTOR :
+- María Jesús Fernández Cortez [@JesuFertez](https://github.com/JesuFertez)
